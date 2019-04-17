@@ -6,6 +6,7 @@ USE info;
 
 CREATE TABLE tianguis (
   id int NOT NULL AUTO_INCREMENT,
+
   name varchar(28) NOT NULL,
   location varchar(64) NOT NULL,
   hours varchar(18) NOT NULL,
@@ -13,6 +14,7 @@ CREATE TABLE tianguis (
   image_path varchar(1024) NOT NULL,
   PRIMARY KEY (ID)
 );
+
 
 CREATE TABLE comments (
   id int NOT NULL AUTO_INCREMENT,
@@ -31,3 +33,4 @@ INSERT INTO tianguis (id, name, location, hours, description, image_path) VALUES
 INSERT INTO tianguis (id, name, location, hours, description, image_path) VALUES (7, "Del Salado", "Metro Acatitlan y Peñon viejo","Miercoles", "DESCRIPTION", "IMAGE_PATH");
 
 INSERT INTO comments (id, name, comment) VALUES (1, "Mike Diaz", "Great stuff");
+
