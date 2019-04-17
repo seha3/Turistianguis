@@ -2,17 +2,29 @@ import React, { Component} from "react";
 import {hot} from "react-hot-loader";
 import "./App.css";
 import Gerson from './Component/button.js'
-
-class App extends Component{
-  render(){
-    return(
-      <div className="App">
-        <h1> yoo! </h1>
-        <Gerson />
-      </div>
-
+import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+ 
+const mapStyles = {
+  width: '50%',
+  height: '50%'
+};
+export class MapContainer extends Component {
+  render() {
+    return (
+      <Map
+        google={this.props.google}
+        zoom={14}
+        style={mapStyles}
+        initialCenter={{
+         lat: -1.2884,
+         lng: 36.8233
+        }}
+      />
     );
   }
 }
 
-export default hot(module)(App);
+ 
+export default GoogleApiWrapper({
+  apiKey: ('AIzaSyCrZ089AaLuQIQZMpj0xFxHH4I3Y9YCp64')
+})(MapContainer)
