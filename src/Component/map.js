@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 const mapStyles = {
   map: {
     position: 'absolute',
-    width: '70%',
-    height: '70%'
+    width: '50%',
+    height: '30%'
   }
 };
 
@@ -58,11 +58,11 @@ export class CurrentLocation extends React.Component {
       }
     }
     this.loadMap();
- 
-  } 
+
+  }
     loadMap() {
     if (this.props && this.props.google) {
-  
+
       const { google } = this.props;
       const maps = google.maps;
 
@@ -81,7 +81,7 @@ export class CurrentLocation extends React.Component {
         }
       );
 
-  
+
       this.map = new maps.Map(node, mapConfig);
     }
   }

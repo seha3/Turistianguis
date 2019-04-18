@@ -4,10 +4,11 @@ import './App.css';
 import Gerson from './Component/button.js';
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import Typewriter from './Component/TypeWriter.js';
+import Searchbar from './Component/SearchBar.js';
 
 const mapStyles = {
-	width: '50%',
-	height: '50%'
+	width: '20%',
+	height: '20%'
 };
 
 import CurrentLocation from './Component/map.js';
