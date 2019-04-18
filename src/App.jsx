@@ -11,23 +11,29 @@ const mapStyles = {
 export class MapContainer extends Component {
   render() {
     return (
-      <div id='container'>
+      
+  <div id="container">
+
+
       <p>
-        <a>
-          Turistianguis
-        </a>
+      <a href='#'>
+      Turistianguis
+      </a>
       </p>
 
-      <Map
-        google={this.props.google}
-        zoom={14}
-        style={mapStyles}
-        initialCenter={{
-         lat: -1.2884,
-         lng: 36.8233
-        }}
-      />
+
+
+        <Map
+          google={this.props.google}
+          zoom={14}
+          style={mapStyles}
+          initialCenter={{
+           lat: -1.2884,
+           lng: 36.8233
+          }}
+        />
       </div>
+
     );
   }
 }
