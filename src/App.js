@@ -3,6 +3,7 @@ import {hot} from "react-hot-loader";
 import "./App.css";
 import Gerson from './Component/button.js'
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import CurrentLocation from './Component/map.js'
  
 
 export class MapContainer extends Component {
@@ -27,21 +28,12 @@ export class MapContainer extends Component {
     }
   };
   render() {
-    const mapStyles = {
-      width: '40%',
-      height: '50%'
-    };
     return (
-      <Map
+      <CurrentLocation
+        centerAroundCurrentLocation
         google={this.props.google}
-        zoom={14}
-        style={mapStyles}
-        initialCenter={{ lat: -1.2884, lng: 36.8233 }}
       >
-        <Marker
-          onClick={this.onMarkerClick}
-          name={'Kenyatta International Convention Centre'}
-        />
+        <Marker onClick={this.onMarkerClick} name={'current location'} />
         <InfoWindow
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}
@@ -51,7 +43,7 @@ export class MapContainer extends Component {
             <h4>{this.state.selectedPlace.name}</h4>
           </div>
         </InfoWindow>
-      </Map>
+      </CurrentLocation>
     );
   }
 
