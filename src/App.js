@@ -3,6 +3,7 @@ import {hot} from "react-hot-loader";
 import "./App.css";
 import Gerson from './Component/button.js'
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import Typewriter from './Component/TypeWriter.js'
 
 const mapStyles = {
   width: '50%',
@@ -42,6 +43,8 @@ export class MapContainer extends Component {
           Turistianguis
         </a>
       </p>
+      <Typewriter />
+
 
       <Map
         google={this.props.google}
