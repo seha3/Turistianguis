@@ -3,18 +3,13 @@ import { hot } from 'react-hot-loader';
 import './App.css';
 // import Gerson from './Component/button';
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
-<<<<<<< HEAD:src/App.js
-import Typewriter from './Component/TypeWriter.js';
-import Searchbar from './Component/SearchBar.js';
-=======
 import Typewriter from './Component/TypeWriter';
 
-import { API_KEY } from '../config/keys';
->>>>>>> 463b6fc4d6379b978075412539ee66fd4b79eeba:client/src/App.js
+import { API_KEY } from '../config/key.js';
 
 const mapStyles = {
-	width: '20%',
-	height: '20%'
+	width: '50%',
+	height: '50%'
 };
 
 import CurrentLocation from './Component/map';

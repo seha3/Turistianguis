@@ -1,6 +1,6 @@
 import React from 'react';
 import TypeWriter from 'react-typewriter';
-
+import "../index.css"
 class Typewriter extends React.Component {
   render () {
     return (
