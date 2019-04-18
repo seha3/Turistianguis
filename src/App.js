@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
 import './App.css';
-// import Gerson from './Component/button';
+import Gerson from './Component/button.js';
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
-import Typewriter from './Component/TypeWriter';
-
-import { API_KEY } from '../config/key.js';
+import Typewriter from './Component/TypeWriter.js';
+import Searchbar from './Component/SearchBar.js';
 
 const mapStyles = {
-	width: '50%',
-	height: '50%'
+	width: '20%',
+	height: '20%'
 };
 
-import CurrentLocation from './Component/map';
+import CurrentLocation from './Component/map.js';
 
 export class MapContainer extends Component {
 	state = {
@@ -39,7 +38,7 @@ export class MapContainer extends Component {
 		return (
 			<div id="container">
 				<p>
-					<a>Turstianguis</a>
+					<a>Turistianguis</a>
 				</p>
 				<Typewriter />
 
@@ -71,5 +70,5 @@ export class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-	apiKey: API_KEY
+	apiKey: 'AIzaSyCrZ089AaLuQIQZMpj0xFxHH4I3Y9YCp64'
 })(MapContainer);
