@@ -1,34 +1,41 @@
 {
-	"name": "turistianguis",
+	"name": "turistiando",
 	"version": "1.0.0",
-	"description": "A simple app to help grow the economy and help tourist find good deals",
-	"main": "server.js",
+	"description": "",
+	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "nodemon server.js --exec babel-node --presets babel-preset-env"
+		"start": "webpack-dev-server --mode development",
+		"build": "webpack --mode development"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Carlosf96/Turistianguis.git"
+		"url": "git+"
 	},
-	"keywords": [
-		"MERN"
-	],
-	"author": "Carlos Franco",
+	"author": "Data Pirate",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/Carlosf96/Turistianguis/issues"
+		"url": "https://github.com/data-pirates/Turistianguis.git"
 	},
-	"homepage": "https://github.com/Carlosf96/Turistianguis#readme",
-	"dependencies": {
-		"express": "^4.16.4"
-	},
+	"homepage": "https://github.com/data-pirates/Turistianguis.git",
 	"devDependencies": {
-		"babel-cli": "^6.26.0",
-		"babel-core": "^6.26.3",
-		"babel-loader": "^8.0.5",
-		"babel-preset-env": "^1.7.0",
-		"mysql": "^2.17.0",
-		"nodemon": "^1.18.11"
+		"@babel/cli": "^7.1.0",
+		"@babel/core": "^7.1.0",
+		"@babel/preset-env": "^7.1.0",
+		"@babel/plugin-proposal-class-properties": "^7.0.0",
+		"@babel/preset-react": "^7.0.0",
+		"babel-loader": "^8.0.2",
+		"css-loader": "^1.0.0",
+		"style-loader": "^0.23.0",
+		"webpack": "^4.19.1",
+		"webpack-cli": "^3.1.1",
+		"webpack-dev-server": "^3.1.8"
+	},
+	"dependencies": {
+		"google-maps-react": "^2.0.2",
+		"react": "^16.5.2",
+		"react-dom": "^16.5.2",
+		"react-hot-loader": "^4.3.11",
+		"react-typewriter": "^0.4.1"
 	}
 }
