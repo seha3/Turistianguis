@@ -4,8 +4,8 @@ import './App.css';
 // import Gerson from './Component/button';
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import Typewriter from './Component/TypeWriter';
-
 import { API_KEY } from '../config/key.js';
+import SearchBar from './Component/SearchBar';
 
 const mapStyles = {
 	width: '50%',
@@ -37,12 +37,14 @@ export class MapContainer extends Component {
 	};
 	render() {
 		return (
-			<div id="container">
+			<div>
 				<p>
 					<a>Turstianguis</a>
 				</p>
-				<Typewriter />
+				<SearchBar/>
 
+				<Typewriter />
+				<div id='container'>
 				<Map
 					google={this.props.google}
 					zoom={14}
@@ -65,6 +67,7 @@ export class MapContainer extends Component {
 						</div>
 					</InfoWindow>
 				</CurrentLocation>
+				</div>
 			</div>
 		);
 	}
