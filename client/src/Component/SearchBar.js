@@ -3,19 +3,14 @@ import '../SearchBar.css'
 class SearchBar extends React.Component {
   render () {
     return (
-    <div id="cover">
-      <form method="get" action="">
-        <div class="tb">
-          <div class="td"><input type="text" placeholder="Search" required/></div>
-          <div class="td" id="s-cover">
-            <button type="submit">
-            <div id="s-circle"></div>
-            <span></span>
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
+      <div class="wrap">
+         <div class="search">
+            <input type="text" class="searchTerm" placeholder="Busca un tianguis"/>
+            <button type="submit" class="searchButton">
+              <i class="fa fa-search"></i>
+           </button>
+         </div>
+      </div>
   )};
 }
 

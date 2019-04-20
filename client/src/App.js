@@ -39,26 +39,15 @@ export class MapContainer extends Component {
 		return (
 			<div>
 				<p>
-					<a>Turstianguis</a>
+					<a>Turistianguis</a>
 				</p>
 				<SearchBar/>
-
 				<Typewriter />
 				<div id='container'>
-				<Map
-					google={this.props.google}
-					zoom={14}
-					style={mapStyles}
-					initialCenter={{
-						lat: -1.2884,
-						lng: 36.8233
-					}}
-				/>
-
 				<CurrentLocation centerAroundCurrentLocation google={this.props.google}>
 					<Marker onClick={this.onMarkerClick} name={'current location'} />
 					<InfoWindow
-						marker={this.state.activeMarker}
+						marker={this.state.activeMaraer}
 						visible={this.state.showingInfoWindow}
 						onClose={this.onClose}
 					>
