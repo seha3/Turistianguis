@@ -1,0 +1,21 @@
+
+.color{
+  font-family: 'Arial', cursive;
+  color : Turquoise;
+  width: 100%;
+  position: center;
+  display: flex;
+  align-content: flex-end;
+}
+
+
+.lala{
+  width: 20%;
+  height: 50%;
+  position: center;
+  align-content: flex-end;
+}
+
+.flex-item {
+  justify-content: flex-end;
+}
