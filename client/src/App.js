@@ -6,6 +6,7 @@ import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import Typewriter from './Component/TypeWriter';
 import { API_KEY } from '../config/key.js';
 import SearchBar from './Component/SearchBar';
+import CommentBox from './Component/CommentBox';
 
 const mapStyles = {
 	width: '50%',
@@ -37,25 +38,38 @@ export class MapContainer extends Component {
 	};
 	render() {
 		return (
-			<div>
-				<p>
-					<a>Turistianguis</a>
-				</p>
-				<SearchBar/>
-				<Typewriter />
+			<div className='parentComponent'>
+				<div>
+					<p>
+						<a>Turistianguis</a>
+					</p>
+				</div>
+
+				<div>
+					<SearchBar/>
+				</div>
+
+				<div>
+					<Typewriter />
+				</div>
+
 				<div id='container'>
-				<CurrentLocation centerAroundCurrentLocation google={this.props.google}>
-					<Marker onClick={this.onMarkerClick} name={'current location'} />
-					<InfoWindow
-						marker={this.state.activeMaraer}
-						visible={this.state.showingInfoWindow}
-						onClose={this.onClose}
-					>
-						<div>
-							<h4>{this.state.selectedPlace.name}</h4>
-						</div>
-					</InfoWindow>
-				</CurrentLocation>
+					<CurrentLocation centerAroundCurrentLocation google={this.props.google}>
+						<Marker onClick={this.onMarkerClick} name={'current location'} />
+						<InfoWindow
+							marker={this.state.activeMaraer}
+							visible={this.state.showingInfoWindow}
+							onClose={this.onClose}
+						>
+							<div>
+								<h4>{this.state.selectedPlace.name}</h4>
+							</div>
+						</InfoWindow>
+					</CurrentLocation>
+				</div>
+
+				<div>
+				  <CommentBox/>
 				</div>
 			</div>
 		);
