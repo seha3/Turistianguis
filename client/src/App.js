@@ -39,17 +39,17 @@ export class MapContainer extends Component {
 	render() {
 		return (
 			<div className='parentComponent'>
-				<div>
+				<div className='Title'>
 					<p>
 						<a>Turistianguis</a>
 					</p>
 				</div>
 
-				<div>
+				<div className='Search'>
 					<SearchBar/>
 				</div>
 
-				<div>
+				<div className='TypeWriter'>
 					<Typewriter />
 				</div>
 
@@ -68,7 +68,7 @@ export class MapContainer extends Component {
 					</CurrentLocation>
 				</div>
 
-				<div>
+				<div className= 'color'>
 				  <CommentBox/>
 				</div>
 			</div>
