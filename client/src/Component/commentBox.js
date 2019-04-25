@@ -42,10 +42,9 @@ class CommentBox extends React.Component {
             Comments:
             <input type="text" className='comment' value={this.state.value} onChange={this.handleChange} />
           </label>
-          <input type="submit" className= 'submit' value="Submit" />
+          <input onClick={this.abuFuction} type="submit" className= 'submit' value="Submit" />
         </form>
         <h1>{this.state.input}</h1>
-        <button onClick={this.abuFuction}> thiis is my buttin</button>
       </div>
   )};
 }
