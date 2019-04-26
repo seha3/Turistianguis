@@ -4,7 +4,7 @@ import './App.css';
 // import Gerson from './Component/button';
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import Typewriter from './Component/TypeWriter';
-import { API_KEY } from '../config/key.js';
+import { API_KEY } from '../config/keys.js';
 import SearchBar from './Component/SearchBar';
 import CommentBox from './Component/CommentBox';
 
@@ -56,8 +56,11 @@ export class MapContainer extends Component {
 				<div id='container'>
 					<CurrentLocation centerAroundCurrentLocation google={this.props.google}>
 						<Marker onClick={this.onMarkerClick} name={'current location'} />
+						<Marker
+    						name={'puebla'}
+   						 	position={{lat: 19.033333, lng: -98.183334}} />
 						<InfoWindow
-							marker={this.state.activeMaraer}
+							marker={this.state.activeMarker}
 							visible={this.state.showingInfoWindow}
 							onClose={this.onClose}
 						>
