@@ -21,4 +21,4 @@ const TianguisSchema = new Schema({
 });
 
 
-module.exports = Tianguis = mongoose.model('Tianguis', TianguisSchema);
+module.exports = Tianguis = mongoose.model('Tianguis', TianguisSchema);                 
