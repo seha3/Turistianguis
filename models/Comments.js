@@ -1,20 +1,14 @@
 const mongoose = require("mongoose");
-const schema = mongoos.schema;
+const Schema = mongoose.Schema;
 
-const CommentSchema = new Schema({
-  name: {
-    type: String,
-    require: true
+const DataSchema = new Schema(
+  {
+    id: Number,
+    message: String,
+    name: String
   },
-  comment: {
-    type: String,
-    require: true
-  },
-  date: {
-    type: String,
-    require: true
-  }
-});
+  { timestamps: true }
+);
 
 
-module.exports = Comment = mongoose.model('Comments', CommentSchema);
+module.exports = Data = mongoose.model('Data', DataSchema);

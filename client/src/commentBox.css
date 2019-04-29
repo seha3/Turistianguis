@@ -14,7 +14,9 @@
   border: 5px solid #1C6EA4;
   border-radius: 20px;
 }
-
+li{
+  list-style: none
+}
 .h3{
   font-family: 'Arial', cursive;
   color : Turquoise;
