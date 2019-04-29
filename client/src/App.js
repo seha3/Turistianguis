@@ -6,7 +6,11 @@ import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import Typewriter from './Component/TypeWriter';
 import { API_KEY } from '../config/keys.js';
 import SearchBar from './Component/SearchBar';
+<<<<<<< HEAD
+import CommentBox from './Component/commentBox';
+=======
 import CommentBox from './Component/commentBox.js';
+>>>>>>> 3f22e00b346842c83e05a777d9529f9e3f582e8c
 
 const mapStyles = {
 	width: '50%',
@@ -36,6 +40,27 @@ export class MapContainer extends Component {
 			});
 		}
 	};
+//to render comments from server
+// class App extends React.Component {
+// 	constructor(props) {
+// 		super(props);
+// 		this.state = {
+// 			user: [''],
+// 			comments: [''],
+// 		}
+// 		this.onButtonClick = this.onButtonClick.bind(this)
+// 	}
+// 	componentDiMount() {
+// 		axios.get('/box')
+// 		.then(res => {
+// 			this.setState({comments:res.data})
+// 			console.log("there is a state", this.state.comments)
+// 		})
+// 		.catch(error => {
+// 			console.log("error", error);
+// 		})
+// 	}
+// }
 	render() {
 		return (
 			<div className='parentComponent'>
@@ -96,9 +121,9 @@ export class MapContainer extends Component {
 						</InfoWindow>
 					</CurrentLocation>
 				</div>
-
-				<div className= 'color'>
-				  <CommentBox/>
+				
+				<div className='color'>
+		<CommentBox/>
 				</div>
 			</div>
 		);
