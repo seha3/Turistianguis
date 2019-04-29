@@ -5,7 +5,7 @@ const mapStyles = {
   map: {
     position: 'absolute',
     top: '400px',
-    right: '430px',
+    right: '50px',
     width: '600px',
     height: '500px',
   }
