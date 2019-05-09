@@ -6,11 +6,8 @@ import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import Typewriter from './Component/TypeWriter';
 import { API_KEY } from '../config/keys.js';
 import SearchBar from './Component/SearchBar';
-<<<<<<< HEAD
-import CommentBox from './Component/commentBox';
-=======
+
 import CommentBox from './Component/commentBox.js';
->>>>>>> 3f22e00b346842c83e05a777d9529f9e3f582e8c
 
 const mapStyles = {
 	width: '50%',
@@ -80,7 +77,7 @@ export class MapContainer extends Component {
 
 				<div id='container'>
 					<CurrentLocation centerAroundCurrentLocation google={this.props.google}>
-						
+
 						<Marker
 						 onClick={this.onMarkerClick}
     						name={'Tianguis del Chopo'}
@@ -109,7 +106,7 @@ export class MapContainer extends Component {
 						 onClick={this.onMarkerClick}
     						name={'Tianguis del Salado'}
    						 	position={{lat: 19.369841, lng:  -98.960375}} />
-									
+
 						<InfoWindow
 							marker={this.state.activeMarker}
 							visible={this.state.showingInfoWindow}
@@ -121,7 +118,7 @@ export class MapContainer extends Component {
 						</InfoWindow>
 					</CurrentLocation>
 				</div>
-				
+
 				<div className='color'>
 		<CommentBox/>
 				</div>
